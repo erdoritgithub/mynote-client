@@ -11,7 +11,7 @@ const Home = () => {
     if(token()){
       navigate('/dashboard')
       setTimeout(() => {
-        alert('Youre not login')
+        alert('Youre not loging')
       }, 100)
     }
   }, [])

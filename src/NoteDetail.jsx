@@ -46,7 +46,6 @@ const NoteDetail = () => {
                     <Col>
                         <h3>{note.title}</h3>
                         <p>{note.description}</p>
-                        <p>By {note.author}</p>
                         <Button 
                             variant='outline-primary' 
                             onClick={() => navigate('/dashboard')}

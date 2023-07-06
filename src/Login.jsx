@@ -17,7 +17,7 @@ const Login = () => {
         if(token()){
             navigate('/dashboard')
             setTimeout(() => {
-                alert('Youre not login')
+                alert('Youre already loggedin')
             }, 100)
         }
     }, [])
@@ -77,6 +77,7 @@ const Login = () => {
                         <p className='mt-3'>Don't have an account ?  
                             <a href="/register"> Please Register !!</a>
                         </p>
+                        <p><a href="/forgetPassword">forgetPassword ?</a></p>
                     </Col>
                 </Row>
             </Container>

@@ -8,8 +8,6 @@ import NavbarComponent from './components/Navbar';
 const AddNote = () => {
   const navigate= useNavigate()
   const [title, setTitle] = useState('')
-  const [slug, setSlug] = useState('')
-  const [excerpt, setExcerpt] = useState('')
   const [description, setDescription] = useState('')
 
   const handleSubmit = (e) => {
@@ -21,8 +19,6 @@ const AddNote = () => {
       url: "http://localhost:3001/notes/add",
       data: {
         title,
-        slug,
-        excerpt,
         description
       },
       headers: {
@@ -50,28 +46,6 @@ const AddNote = () => {
                   placeholder='Title'
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                  autoComplete='off'
-                />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                <Form.Label>Slug</Form.Label>
-                <Form.Control 
-                  type="text" 
-                  name="slug"
-                  placeholder='Slug'
-                  value={slug}
-                  onChange={(e) => setSlug(e.target.value)} 
-                  autoComplete='off'
-                />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                <Form.Label>Excerpt</Form.Label>
-                <Form.Control 
-                  type="text" 
-                  name="excerpt"
-                  placeholder='Excerpt'
-                  value={excerpt}
-                  onChange={(e) => setExcerpt(e.target.value)} 
                   autoComplete='off'
                 />
               </Form.Group>
